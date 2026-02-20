@@ -1,0 +1,112 @@
+# ─────────────────────────────────────────────────
+#  CrisisAI — Multi-Modal Emergency Responder
+#  Requirements & Dependencies
+# ─────────────────────────────────────────────────
+
+# ── Node.js Runtime ──
+# Minimum version: 16.0.0
+# Recommended version: 18.x LTS or 20.x LTS
+# Download: https://nodejs.org
+
+# ── NPM Packages (install via: npm install) ──
+# Listed in package.json; this file is for reference.
+
+# PRODUCTION DEPENDENCIES
+# ───────────────────────
+express==4.18.2
+# Fast, minimal web framework for Node.js
+# Used for: HTTP server, routing, middleware, static file serving
+
+cors==2.8.5
+# Cross-Origin Resource Sharing middleware
+# Used for: enabling requests from different origins (browser → server)
+
+multer==1.4.5-lts.1
+# Multipart form-data handling middleware
+# Used for: file/image uploads from the browser
+
+# DEVELOPMENT DEPENDENCIES
+# ─────────────────────────
+nodemon==3.0.1
+# Monitors file changes and auto-restarts the server
+# Used for: development workflow (npm run dev)
+
+
+# ── Browser / Client-Side Requirements ──
+# No installation needed — these are browser-native APIs
+
+# Web Speech API
+# - Voice input (speech-to-text)
+# - Supported in: Chrome 80+, Edge 80+
+# - Not required for core functionality (degrades gracefully)
+# - Docs: https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
+
+# FileReader API
+# - Used for reading image files as base64
+# - Supported in all modern browsers
+# - Docs: https://developer.mozilla.org/en-US/docs/Web/API/FileReader
+
+# Fetch API
+# - Used for making HTTP requests from the browser to the backend
+# - Supported in all modern browsers
+# - Docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+
+# ── External Resources (CDN — no installation) ──
+# Google Fonts: Syne, DM Sans, DM Mono
+# CDN URL: https://fonts.googleapis.com
+# Used for: typography in the UI
+# Note: Requires internet connection on first load; can be self-hosted offline
+
+
+# ── Optional: AI/ML Integrations ──
+# If you want to extend the backend with real AI image analysis,
+# you can integrate any of the following via their Node.js SDKs:
+
+# OpenAI Vision API (GPT-4V)
+# npm install openai
+# Docs: https://platform.openai.com/docs/guides/vision
+
+# Google Cloud Vision API
+# npm install @google-cloud/vision
+# Docs: https://cloud.google.com/vision
+
+# Amazon Rekognition
+# npm install @aws-sdk/client-rekognition
+# Docs: https://docs.aws.amazon.com/rekognition/
+
+
+# ── Optional: Database (for persistent logging) ──
+
+# SQLite (lightweight, file-based)
+# npm install better-sqlite3
+# Recommended for: local deployments, small scale
+
+# MongoDB
+# npm install mongoose
+# Recommended for: cloud deployments, scalable logs
+
+# PostgreSQL
+# npm install pg
+# Recommended for: production environments
+
+
+# ── Operating System Requirements ──
+# - Windows 10/11, macOS 11+, or Linux (Ubuntu 20.04+)
+# - No native dependencies required
+# - Works in Docker containers (Node 18-alpine or similar)
+
+
+# ── Minimum Hardware ──
+# - CPU: 1 core (2+ recommended)
+# - RAM: 256MB (512MB+ recommended)
+# - Disk: 100MB for app + space for uploaded images
+
+
+# ── Installation Summary ──
+#
+# 1. Install Node.js 18 LTS from https://nodejs.org
+# 2. Run: npm install
+# 3. Move index.html to public/ directory
+# 4. Run: npm start
+# 5. Open: http://localhost:3000
